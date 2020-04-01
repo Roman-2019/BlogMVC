@@ -1,47 +1,101 @@
-﻿using System;
+﻿using BlogMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using BlogMVC.Interfaces;
-using BlogMVC.Models;
-using BussinesssLogicLayer.Interfaces;
-using BussinesssLogicLayer.Models;
-using BussinesssLogicLayer.Services;
+using System.Web.Mvc;
 
 
 namespace BlogMVC.Controllers
 {
-    public class PostController: IDBController<PostViewModel>
+    public class PostController : Controller
     {
-        public readonly IDBService<PostModel> _postViewModelService;
+        List<PostViewModel> list;
         public PostController()
         {
-            _postViewModelService = new PostService();
+            list = new List<PostViewModel>
+            {
+                new PostViewModel{Id=1,Title="ashdjshahkjdksjf",Author="Roman",DateTime=DateTime.Parse("01.01.2020") },
+                new PostViewModel{Id=2,Title="qwtyetywqewyury",Author="Poni",DateTime=DateTime.Parse("01.01.2020") },
+                new PostViewModel{Id=3,Title="zxcnbzxvxcz",Author="Qwerty",DateTime=DateTime.Parse("01.01.2020") }
+            };
+        }
+        // GET: Post
+        public ActionResult Index()
+        {           
+            return View(list);
         }
 
-        public void Add(PostViewModel model)
+        // GET: Post/Details/5
+        public ActionResult Details(int id)
         {
-            throw new NotImplementedException();
+            return View();
         }
 
-        public void Delete(int id)
+        // GET: Post/Create
+        public ActionResult Create()
         {
-            throw new NotImplementedException();
+            return View();
         }
 
-        public IEnumerable<PostViewModel> GetAll()
+        // POST: Post/Create
+        [HttpPost]
+        public ActionResult Create(FormCollection collection)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // TODO: Add insert logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
         }
 
-        public PostViewModel GetById()
+        // GET: Post/Edit/5
+        public ActionResult Edit(int id)
         {
-            throw new NotImplementedException();
+            return View();
         }
 
-        public void Update(PostViewModel model)
+        // POST: Post/Edit/5
+        [HttpPost]
+        public ActionResult Edit(int id, FormCollection collection)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // TODO: Add update logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Post/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View();
+        }
+
+        // POST: Post/Delete/5
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }
