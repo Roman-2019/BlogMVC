@@ -1,0 +1,14 @@
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\BussinesssLogicLayer.dll.config
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\BussinesssLogicLayer.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\BussinesssLogicLayer.pdb
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\DAL.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\EntityFramework.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\DAL.pdb
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\DAL.dll.config
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\EntityFramework.xml
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\obj\Debug\BussinesssLogicLayer.csprojAssemblyReference.cache
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\obj\Debug\BussinesssLogicLayer.csproj.CopyComplete
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\obj\Debug\BussinesssLogicLayer.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\obj\Debug\BussinesssLogicLayer.pdb

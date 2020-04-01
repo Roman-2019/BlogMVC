@@ -1,0 +1,11 @@
+E:\C\MVC\BlogMVC\DAL\bin\Debug\DAL.dll.config
+E:\C\MVC\BlogMVC\DAL\bin\Debug\DAL.dll
+E:\C\MVC\BlogMVC\DAL\bin\Debug\DAL.pdb
+E:\C\MVC\BlogMVC\DAL\bin\Debug\EntityFramework.dll
+E:\C\MVC\BlogMVC\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\C\MVC\BlogMVC\DAL\bin\Debug\EntityFramework.xml
+E:\C\MVC\BlogMVC\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\C\MVC\BlogMVC\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\C\MVC\BlogMVC\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\C\MVC\BlogMVC\DAL\obj\Debug\DAL.dll
+E:\C\MVC\BlogMVC\DAL\obj\Debug\DAL.pdb
