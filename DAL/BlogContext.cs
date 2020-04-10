@@ -14,9 +14,10 @@ namespace DAL
         {
         }
 
-        DbSet<Post> Posts { get; set; }
-        DbSet<Comment> Comments { get; set; }
-        DbSet<Category> Categories { get; set; }
-        DbSet<Tag> Tags { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Author> Authors { get; set; }
     }
 }

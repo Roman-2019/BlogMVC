@@ -9,12 +9,19 @@ namespace DAL.Models
     public class Post
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Author { get; set; }
+        public string Title { get; set; }      
+        public string Text { get; set; }
         public DateTime DateTime { get; set; }
-        //public virtual ICollection<Commetnts> Commetnts { get; set; }
 
-        public int CommentId { get; set; }
+        public int AuthorId { get; set; }
+        public Author Author { get; set; }
 
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Tag> Tags { get; set; }
+        public Post() 
+        {
+            Comments = new List<Comment>();
+            Tags = new List<Tag>();
+        }
     }
 }

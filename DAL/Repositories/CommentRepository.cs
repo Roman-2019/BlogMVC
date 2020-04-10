@@ -16,29 +16,39 @@ namespace DAL.Repositories
             _bctx = new BlogContext();
         }
 
-        public void Add(Comment model)
+        public void Add(Comment comment)
         {
-            throw new NotImplementedException();
+            _bctx.Comments.Add(comment);
+            _bctx.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var commentDelete = GetById(id);
+            _bctx.Comments.Remove(commentDelete);
+            _bctx.SaveChanges();
         }
 
         public IEnumerable<Comment> GetAll()
         {
-            throw new NotImplementedException();
+            return _bctx.Comments.AsNoTracking().ToList();
         }
 
-        public Comment GetById()
+        public Comment GetById(int id)
         {
-            throw new NotImplementedException();
+            var commentGetById = _bctx.Comments.FirstOrDefault(x => x.Id == id);
+            return commentGetById;
         }
 
-        public void Update(Comment model)
+        public void Update(Comment comment)
         {
-            throw new NotImplementedException();
+            var updatedComment = GetById(comment.Id);
+            updatedComment.Title = comment.Title;
+            /*updatedComment.Post = comment.Post;
+            updatedComment.Author = comment.Author;*/
+
+            _bctx.Entry(updatedComment);
+            _bctx.SaveChanges();
         }
     }
 }

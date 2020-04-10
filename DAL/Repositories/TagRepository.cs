@@ -16,29 +16,37 @@ namespace DAL.Repositories
             _bctx = new BlogContext();
         }
 
-        public void Add(Tag model)
+        public void Add(Tag tag)
         {
-            throw new NotImplementedException();
+            _bctx.Tags.Add(tag);
+            _bctx.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var tagDelete = GetById(id);
+            _bctx.Tags.Remove(tagDelete);
+            _bctx.SaveChanges();
         }
 
         public IEnumerable<Tag> GetAll()
         {
-            throw new NotImplementedException();
+            return _bctx.Tags.AsNoTracking().ToList();
         }
 
-        public Tag GetById()
+        public Tag GetById(int id)
         {
-            throw new NotImplementedException();
+            var tagGetById = _bctx.Tags.FirstOrDefault(x => x.Id == id);
+            return tagGetById;
         }
 
-        public void Update(Tag model)
+        public void Update(Tag tag)
         {
-            throw new NotImplementedException();
+            var updatedTag = GetById(tag.Id);
+            updatedTag.Posts = tag.Posts;  
+
+            _bctx.Entry(updatedTag);
+            _bctx.SaveChanges();
         }
     }
 }
