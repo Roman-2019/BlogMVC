@@ -12,3 +12,6 @@ E:\C\MVC\BlogMVC\BussinesssLogicLayer\obj\Debug\BussinesssLogicLayer.csprojAssem
 E:\C\MVC\BlogMVC\BussinesssLogicLayer\obj\Debug\BussinesssLogicLayer.csproj.CopyComplete
 E:\C\MVC\BlogMVC\BussinesssLogicLayer\obj\Debug\BussinesssLogicLayer.dll
 E:\C\MVC\BlogMVC\BussinesssLogicLayer\obj\Debug\BussinesssLogicLayer.pdb
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\AutoMapper.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\AutoMapper.pdb
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\AutoMapper.xml

@@ -13,7 +13,7 @@ namespace BussinesssLogicLayer.Services
 {
     public class PostService: IDBService<PostModel>
     {
-        public readonly IDBRepository<Post> _postRepository;
+        private readonly IDBRepository<Post> _postRepository;
 
         public PostService()
         {
@@ -35,7 +35,7 @@ namespace BussinesssLogicLayer.Services
             throw new NotImplementedException();
         }
 
-        public PostModel GetById()
+        public PostModel GetById(int id)
         {
             throw new NotImplementedException();
         }

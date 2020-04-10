@@ -13,7 +13,7 @@ namespace BussinesssLogicLayer.Services
 {
     public class TagService: IDBService<TagModel>
     {
-        public readonly IDBRepository<Tag> _tagRepository;
+        private readonly IDBRepository<Tag> _tagRepository;
 
         public TagService()
         {
@@ -35,7 +35,7 @@ namespace BussinesssLogicLayer.Services
             throw new NotImplementedException();
         }
 
-        public TagModel GetById()
+        public TagModel GetById(int id)
         {
             throw new NotImplementedException();
         }

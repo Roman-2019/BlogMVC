@@ -15,9 +15,9 @@ namespace BlogMVC.Controllers
         {
             list = new List<PostViewModel>
             {
-                new PostViewModel{Id=1,Title="ashdjshahkjdksjf",Author="Roman",DateTime=DateTime.Parse("01.01.2020") },
-                new PostViewModel{Id=2,Title="qwtyetywqewyury",Author="Poni",DateTime=DateTime.Parse("01.01.2020") },
-                new PostViewModel{Id=3,Title="zxcnbzxvxcz",Author="Qwerty",DateTime=DateTime.Parse("01.01.2020") }
+                new PostViewModel{Id=1,Title="ashdjshahkjdksjf",AuthorViewModelId=1,DateTime=DateTime.Parse("01.01.2020") },
+                new PostViewModel{Id=2,Title="qwtyetywqewyury",AuthorViewModelId=1,DateTime=DateTime.Parse("01.01.2020") },
+                new PostViewModel{Id=3,Title="zxcnbzxvxcz",AuthorViewModelId=2,DateTime=DateTime.Parse("01.01.2020") }
             };
         }
         // GET: Post

@@ -13,7 +13,7 @@ namespace BussinesssLogicLayer.Services
 {
     public class CategoryService:IDBService<CategoryModel>
     {
-        public readonly IDBRepository<Category> _categoryRepository;
+        private readonly IDBRepository<Category> _categoryRepository;
 
         public CategoryService()
         {
@@ -35,7 +35,7 @@ namespace BussinesssLogicLayer.Services
             throw new NotImplementedException();
         }
 
-        public CategoryModel GetById()
+        public CategoryModel GetById(int id)
         {
             throw new NotImplementedException();
         }

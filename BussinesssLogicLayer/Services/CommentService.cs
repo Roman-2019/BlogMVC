@@ -13,7 +13,7 @@ namespace BussinesssLogicLayer.Services
 {
     public class CommentService:IDBService<CommentModel>
     {
-        public readonly IDBRepository<Comment> _commentRepository;
+        private readonly IDBRepository<Comment> _commentRepository;
 
         public CommentService()
         {
@@ -35,7 +35,7 @@ namespace BussinesssLogicLayer.Services
             throw new NotImplementedException();
         }
 
-        public CommentModel GetById()
+        public CommentModel GetById(int id)
         {
             throw new NotImplementedException();
         }

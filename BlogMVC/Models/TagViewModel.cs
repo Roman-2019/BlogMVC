@@ -9,6 +9,10 @@ namespace BlogMVC.Models
     {
         public int Id { get; set; }
         public string Text { get; set; }
-
+        public virtual IEnumerable<PostViewModel> Posts { get; set; }
+        public TagViewModel()
+        {
+            Posts = new List<PostViewModel>();
+        }
     }
 }

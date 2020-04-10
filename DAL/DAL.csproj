@@ -53,6 +53,11 @@
   <ItemGroup>
     <Compile Include="BlogContext.cs" />
     <Compile Include="Interfaces\IDBRepository.cs" />
+    <Compile Include="Migrations\202004101400360_InitialCtreate.cs" />
+    <Compile Include="Migrations\202004101400360_InitialCtreate.designer.cs">
+      <DependentUpon>202004101400360_InitialCtreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -65,7 +70,11 @@
     <Compile Include="Repositories\PostRepository.cs" />
     <Compile Include="Repositories\TagRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004101400360_InitialCtreate.resx">
+      <DependentUpon>202004101400360_InitialCtreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

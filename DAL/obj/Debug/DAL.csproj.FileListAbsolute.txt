@@ -9,3 +9,5 @@ E:\C\MVC\BlogMVC\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 E:\C\MVC\BlogMVC\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\C\MVC\BlogMVC\DAL\obj\Debug\DAL.dll
 E:\C\MVC\BlogMVC\DAL\obj\Debug\DAL.pdb
+E:\C\MVC\BlogMVC\DAL\obj\Debug\DAL.Migrations.InitialCtreate.resources
+E:\C\MVC\BlogMVC\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
