@@ -16,7 +16,7 @@ namespace BlogMVC.Controllers
         public readonly IDBService<TagModel> _tagViewModelService;
         public TagController() 
         {
-            _tagViewModelService = new TagService();
+           // _tagViewModelService = new TagService();
         }
 
         public void Add(TagViewModel model)

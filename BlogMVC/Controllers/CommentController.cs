@@ -15,7 +15,7 @@ namespace BlogMVC.Controllers
         public readonly IDBService<CommentModel> _commentViewModelService;
         public CommentController()
         {
-            _commentViewModelService = new CommentService();
+            //_commentViewModelService = new CommentService();
         }
 
         public void Add(CommentViewModel model)

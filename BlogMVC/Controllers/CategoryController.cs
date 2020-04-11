@@ -15,7 +15,7 @@ namespace BlogMVC.Controllers
         public readonly IDBService<CategoryModel> _categoryViewModelService;
         public CategoryController()
         {
-            _categoryViewModelService = new CategoryService();
+            //_categoryViewModelService = new CategoryService();
         }
 
         public void Add(CategoryViewModel model)

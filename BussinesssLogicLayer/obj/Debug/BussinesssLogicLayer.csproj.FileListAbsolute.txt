@@ -15,3 +15,17 @@ E:\C\MVC\BlogMVC\BussinesssLogicLayer\obj\Debug\BussinesssLogicLayer.pdb
 E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\AutoMapper.dll
 E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\AutoMapper.pdb
 E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\AutoMapper.xml
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.Mvc.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.Web.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.WebApi.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\System.ValueTuple.dll
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.pdb
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.xml
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.Mvc.pdb
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.Web.pdb
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.Web.xml
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.WebApi.pdb
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.WebApi.xml
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\LightInject.WebApi.dll.config
+E:\C\MVC\BlogMVC\BussinesssLogicLayer\bin\Debug\System.ValueTuple.xml

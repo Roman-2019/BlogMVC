@@ -8,10 +8,10 @@ namespace BussinesssLogicLayer.Interfaces
 {
     public interface IDBService<T> where T : class
     {
-        IEnumerable<T> GetAll();
+       // IEnumerable<T> GetAll();
         T GetById(int id);
-        void Add(T model);
+       /* void Add(T model);
         void Delete(int id);
-        void Update(T model);
+        void Update(T model);*/
     }
 }

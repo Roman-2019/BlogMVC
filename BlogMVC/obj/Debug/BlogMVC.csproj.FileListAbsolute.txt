@@ -102,3 +102,11 @@ E:\C\MVC\BlogMVC\BlogMVC\bin\EntityFramework.xml
 E:\C\MVC\BlogMVC\BlogMVC\bin\EntityFramework.SqlServer.xml
 E:\C\MVC\BlogMVC\BlogMVC\bin\DAL.pdb
 E:\C\MVC\BlogMVC\BlogMVC\bin\DAL.dll.config
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.dll
+E:\C\MVC\BlogMVC\BlogMVC\bin\AutoMapper.dll
+E:\C\MVC\BlogMVC\BlogMVC\bin\System.ValueTuple.dll
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.pdb
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.xml
+E:\C\MVC\BlogMVC\BlogMVC\bin\AutoMapper.pdb
+E:\C\MVC\BlogMVC\BlogMVC\bin\AutoMapper.xml
+E:\C\MVC\BlogMVC\BlogMVC\bin\System.ValueTuple.xml

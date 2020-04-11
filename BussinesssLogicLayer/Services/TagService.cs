@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using BussinesssLogicLayer.Interfaces;
 using BussinesssLogicLayer.Models;
 using DAL.Interfaces;
@@ -11,38 +12,37 @@ using DAL.Repositories;
 
 namespace BussinesssLogicLayer.Services
 {
-    public class TagService: IDBService<TagModel>
+    public class TagService : GeneralService<TagModel, Tag>, IDBService<TagModel>
     {
-        private readonly IDBRepository<Tag> _tagRepository;
+        private readonly IMapper _mapper;
 
-        public TagService()
+        public TagService(IDBRepository<Tag> repository, IMapper mapper) : base(repository)
         {
-            _tagRepository = new TagRepository();
-        }
-
-        public void Add(TagModel model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<TagModel> GetAll()
-        {
-            throw new NotImplementedException();
+            _mapper = mapper;
         }
 
         public TagModel GetById(int id)
         {
-            throw new NotImplementedException();
+            var tagModel = GetAll().FirstOrDefault(x => x.Id == id);
+            return tagModel;
+        }
+        public override TagModel Map(Tag modelDL)
+        {
+            return _mapper.Map<TagModel>(modelDL);
         }
 
-        public void Update(TagModel model)
+        public override Tag Map(TagModel modelBL)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<Tag>(modelBL);
+        }
+
+        public override IEnumerable<TagModel> Map(IList<Tag> posts)
+        {
+            return _mapper.Map<IEnumerable<TagModel>>(posts);
+        }
+        public override IEnumerable<Tag> Map(IList<TagModel> postsModel)
+        {
+            return _mapper.Map<IEnumerable<Tag>>(postsModel);
         }
     }
 }

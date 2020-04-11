@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using BussinesssLogicLayer.Interfaces;
 using BussinesssLogicLayer.Models;
 using DAL.Interfaces;
@@ -11,38 +12,37 @@ using DAL.Repositories;
 
 namespace BussinesssLogicLayer.Services
 {
-    public class CommentService:IDBService<CommentModel>
+    public class CommentService : GeneralService<CommentModel, Comment>, IDBService<CommentModel>
     {
-        private readonly IDBRepository<Comment> _commentRepository;
+        private readonly IMapper _mapper;
 
-        public CommentService()
+        public CommentService(IDBRepository<Comment> repository, IMapper mapper) : base(repository)
         {
-            _commentRepository = new CommentRepository();
-        }
-
-        public void Add(CommentModel model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<CommentModel> GetAll()
-        {
-            throw new NotImplementedException();
+            _mapper = mapper;
         }
 
         public CommentModel GetById(int id)
         {
-            throw new NotImplementedException();
+            var commentModel = GetAll().FirstOrDefault(x => x.Id == id);
+            return commentModel;
+        }
+        public override CommentModel Map(Comment modelDL)
+        {
+            return _mapper.Map<CommentModel>(modelDL);
         }
 
-        public void Update(CommentModel model)
+        public override Comment Map(CommentModel modelBL)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<Comment>(modelBL);
+        }
+
+        public override IEnumerable<CommentModel> Map(IList<Comment> posts)
+        {
+            return _mapper.Map<IEnumerable<CommentModel>>(posts);
+        }
+        public override IEnumerable<Comment> Map(IList<CommentModel> postsModel)
+        {
+            return _mapper.Map<IEnumerable<Comment>>(postsModel);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using BussinesssLogicLayer.Interfaces;
 using BussinesssLogicLayer.Models;
 using DAL.Interfaces;
@@ -11,38 +12,37 @@ using DAL.Repositories;
 
 namespace BussinesssLogicLayer.Services
 {
-    public class PostService: IDBService<PostModel>
+    public class PostService : GeneralService<PostModel, Post>, IDBService<PostModel>
     {
-        private readonly IDBRepository<Post> _postRepository;
+        private readonly IMapper _mapper;
 
-        public PostService()
+        public PostService(IDBRepository<Post> repository, IMapper mapper) : base(repository)
         {
-            _postRepository = new PostRepository();
-        }
-
-        public void Add(PostModel model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<PostModel> GetAll()
-        {
-            throw new NotImplementedException();
+            _mapper = mapper;
         }
 
         public PostModel GetById(int id)
         {
-            throw new NotImplementedException();
+            var postModel = GetAll().FirstOrDefault(x => x.Id == id);
+            return postModel;
+        }
+        public override PostModel Map(Post modelDL)
+        {
+            return _mapper.Map<PostModel>(modelDL);
         }
 
-        public void Update(PostModel model)
+        public override Post Map(PostModel modelBL)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<Post>(modelBL);
+        }
+
+        public override IEnumerable<PostModel> Map(IList<Post> posts)
+        {
+            return _mapper.Map<IEnumerable<PostModel>>(posts);
+        }
+        public override IEnumerable<Post> Map(IList<PostModel> postsModel)
+        {
+            return _mapper.Map<IEnumerable<Post>>(postsModel);
         }
     }
 }

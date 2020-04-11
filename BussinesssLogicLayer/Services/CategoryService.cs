@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using BussinesssLogicLayer.Interfaces;
 using BussinesssLogicLayer.Models;
 using DAL.Interfaces;
@@ -11,38 +12,37 @@ using DAL.Repositories;
 
 namespace BussinesssLogicLayer.Services
 {
-    public class CategoryService:IDBService<CategoryModel>
+    public class CategoryService : GeneralService<CategoryModel, Category>, IDBService<CategoryModel>
     {
-        private readonly IDBRepository<Category> _categoryRepository;
+        private readonly IMapper _mapper;
 
-        public CategoryService()
+        public CategoryService(IDBRepository<Category> repository, IMapper mapper) : base(repository)
         {
-            _categoryRepository = new CategoryRepository();
-        }
-
-        public void Add(CategoryModel model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<CategoryModel> GetAll()
-        {
-            throw new NotImplementedException();
+            _mapper = mapper;
         }
 
         public CategoryModel GetById(int id)
         {
-            throw new NotImplementedException();
+            var categoryModel = GetAll().FirstOrDefault(x => x.Id == id);
+            return categoryModel;
+        }
+        public override CategoryModel Map(Category modelDL)
+        {
+            return _mapper.Map<CategoryModel>(modelDL);
         }
 
-        public void Update(CategoryModel model)
+        public override Category Map(CategoryModel modelBL)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<Category>(modelBL);
+        }
+
+        public override IEnumerable<CategoryModel> Map(IList<Category> posts)
+        {
+            return _mapper.Map<IEnumerable<CategoryModel>>(posts);
+        }
+        public override IEnumerable<Category> Map(IList<CategoryModel> postsModel)
+        {
+            return _mapper.Map<IEnumerable<Category>>(postsModel);
         }
     }
 }
