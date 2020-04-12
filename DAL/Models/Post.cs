@@ -14,14 +14,10 @@ namespace DAL.Models
         public DateTime DateTime { get; set; }
 
         public int AuthorId { get; set; }
-        public Author Author { get; set; }
+        public virtual Author Author { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<Tag> Tags { get; set; }
-        /*public Post() 
-        {
-            Comments = new List<Comment>();
-            Tags = new List<Tag>();
-        }*/
+    
     }
 }

@@ -14,14 +14,10 @@ namespace BussinesssLogicLayer.Models
         public DateTime DateTime { get; set; }
 
         public int AuthorId { get; set; }
-        public AuthorModel Author { get; set; }
+        public virtual AuthorModel AuthorModel { get; set; }
 
-        public virtual IEnumerable<CommentModel> Comments { get; set; }
-        public virtual IEnumerable<TagModel> Tags { get; set; }
-        public PostModel()
-        {
-            Comments = new List<CommentModel>();
-            Tags = new List<TagModel>();
-        }
+        public virtual ICollection<CommentModel> Comments { get; set; }
+        public virtual ICollection<TagModel> Tags { get; set; }
+      
     }
 }

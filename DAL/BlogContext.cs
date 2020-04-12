@@ -12,6 +12,7 @@ namespace DAL
     {
         public BlogContext() : base(@"Data Source=.\SQLSERVER;Initial Catalog=MyBlog;Integrated Security=True")
         {
+
         }
 
         public DbSet<Post> Posts { get; set; }

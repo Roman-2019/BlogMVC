@@ -110,3 +110,12 @@ E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.xml
 E:\C\MVC\BlogMVC\BlogMVC\bin\AutoMapper.pdb
 E:\C\MVC\BlogMVC\BlogMVC\bin\AutoMapper.xml
 E:\C\MVC\BlogMVC\BlogMVC\bin\System.ValueTuple.xml
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.Mvc.dll
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.Web.dll
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.WebApi.dll
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.Mvc.pdb
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.Web.pdb
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.Web.xml
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.WebApi.pdb
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.WebApi.xml
+E:\C\MVC\BlogMVC\BlogMVC\bin\LightInject.WebApi.dll.config

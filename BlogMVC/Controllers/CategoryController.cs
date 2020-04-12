@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using BlogMVC.Interfaces;
+using System.Web.Mvc;
 using BlogMVC.Models;
 using BussinesssLogicLayer.Interfaces;
 using BussinesssLogicLayer.Models;
@@ -10,7 +10,7 @@ using BussinesssLogicLayer.Services;
 
 namespace BlogMVC.Controllers
 {
-    public class CategoryController: IDBController<CategoryViewModel>
+    public class CategoryController: Controller
     {
         public readonly ICategoryService _categoryViewModelService;
         public CategoryController()

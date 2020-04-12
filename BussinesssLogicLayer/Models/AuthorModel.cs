@@ -15,10 +15,6 @@ namespace BussinesssLogicLayer.Models
         public string Status { get; set; }
         public ICollection<PostModel> Posts { get; set; }
         public ICollection<CommentModel> Comments { get; set; }
-        public AuthorModel()
-        {
-            Posts = new List<PostModel>();
-            Comments = new List<CommentModel>();
-        }
+        
     }
 }

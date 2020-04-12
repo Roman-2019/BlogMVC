@@ -12,12 +12,8 @@ namespace BlogMVC.Models
         public string Login { get; set; }
         public string Password { get; set; }
         public string Status { get; set; }
-        /*public IEnumerable<PostViewModel> Posts { get; set; }
-        public IEnumerable<CommentViewModel> Comments { get; set; }
-       public AuthorViewModel()
-        {
-            Posts = new List<PostViewModel>();
-            Comments = new List<CommentViewModel>();
-        }*/
+        //public IEnumerable<PostViewModel> Posts { get; set; }
+        //public IEnumerable<CommentViewModel> Comments { get; set; }
+      
     }
 }

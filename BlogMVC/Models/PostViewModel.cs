@@ -13,14 +13,10 @@ namespace BlogMVC.Models
         public DateTime DateTime { get; set; }
 
         public int AuthorViewModelId { get; set; }
-        public AuthorViewModel Author { get; set; }
+        public virtual AuthorViewModel AuthorViewModel { get; set; }
 
-        /*public virtual IEnumerable<CommentViewModel> Comments { get; set; }
-        public virtual IEnumerable<TagViewModel> Tags { get; set; }
-        public PostViewModel()
-        {
-            Comments = new List<CommentViewModel>();
-            Tags = new List<TagViewModel>();
-        }*/
+        //public virtual IEnumerable<CommentViewModel> Comments { get; set; }
+        //public virtual IEnumerable<TagViewModel> Tags { get; set; }
+       
     }
 }

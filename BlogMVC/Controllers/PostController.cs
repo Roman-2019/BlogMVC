@@ -51,7 +51,7 @@ namespace BlogMVC.Controllers
         public ActionResult Details(int id)
         {
             var postModel = _postService.GetById(id);
-            var postViewModel = _mapper.Map<AuthorViewModel>(postModel);
+            var postViewModel = _mapper.Map<PostViewModel>(postModel);
             return View(postViewModel);
         }
 
