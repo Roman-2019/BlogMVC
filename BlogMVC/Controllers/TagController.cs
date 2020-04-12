@@ -50,21 +50,22 @@ namespace BlogMVC.Controllers
         [HttpPost]
         public ActionResult Create(TagViewModel model)
         {
-            try
-            {
-                // TODO: Add insert logic here
-                if (!ModelState.IsValid)
-                {
-                    return View();
-                }
+            //try
+            //{
+            // TODO: Add insert logic here
+            //if (!ModelState.IsValid)
+            //{
+            //    return View();
+            //}
+            if (ModelState.IsValid) { 
                 var tagModel = _mapper.Map<TagModel>(model);
                 _tagService.Add(tagModel);
                 return RedirectToAction("Index");
             }
-            catch
-            {
+            //catch
+           // {
                 return View();
-            }
+            //}
         }
 
         // GET: Tag/Edit/5
@@ -77,21 +78,22 @@ namespace BlogMVC.Controllers
         [HttpPost]
         public ActionResult Edit(int id, TagViewModel model)
         {
-            try
-            {
-                // TODO: Add update logic here
-                if (!ModelState.IsValid)
-                {
-                    return View();
-                }
+            //try
+            //{
+            //    // TODO: Add update logic here
+            //    if (!ModelState.IsValid)
+            //    {
+            //        return View();
+            //    }
+            if (ModelState.IsValid) { 
                 var tagModel = _mapper.Map<TagModel>(model);
-                _tagService.Add(tagModel);
+                _tagService.Update(tagModel);
                 return RedirectToAction("Index");
             }
-            catch
-            {
+            //catch
+            //{
                 return View();
-            }
+            //}
         }
 
         // GET: Tag/Delete/5

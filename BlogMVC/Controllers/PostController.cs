@@ -65,21 +65,22 @@ namespace BlogMVC.Controllers
         [HttpPost]
         public ActionResult Create(PostViewModel model)
         {
-            try
-            {
-                // TODO: Add insert logic here
-                if (!ModelState.IsValid)
-                {
-                    return View();
-                }
-                var tagModel = _mapper.Map<PostModel>(model);
-                _postService.Add(tagModel);
+            //try
+            //{
+            // TODO: Add insert logic here
+            //if (!ModelState.IsValid)
+            //{
+            //    return View();
+            //}
+            if (ModelState.IsValid) { 
+                var postModel = _mapper.Map<PostModel>(model);
+                _postService.Add(postModel);
                 return RedirectToAction("Index");
             }
-            catch
-            {
+            //catch
+            //{
                 return View();
-            }
+            //}
         }
 
         // GET: Post/Edit/5
@@ -92,21 +93,23 @@ namespace BlogMVC.Controllers
         [HttpPost]
         public ActionResult Edit(int id, PostViewModel model)
         {
-            try
-            {
-                // TODO: Add update logic here
-                if (!ModelState.IsValid)
-                {
-                    return View();
-                }
-                var tagModel = _mapper.Map<PostModel>(model);
-                _postService.Add(tagModel);
+            //try
+            //{
+            // TODO: Add update logic here
+            //if (!ModelState.IsValid)
+            //{
+            //    return View();
+            //}
+            if (ModelState.IsValid) { 
+                var postModel = _mapper.Map<PostModel>(model);
+                _postService.Update(postModel);
+                
                 return RedirectToAction("Index");
             }
-            catch 
-            {
+            //catch 
+            //{
                 return View();
-            }
+            //}
         }
 
         // GET: Post/Delete/5

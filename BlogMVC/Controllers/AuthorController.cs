@@ -53,22 +53,23 @@ namespace BlogMVC.Controllers
         [HttpPost]
         public ActionResult Create(AuthorViewModel model)
         {
-            try
-            {
+            //try
+            //{
                 // TODO: Add insert logic here
-                if (!ModelState.IsValid)
-                {
-                    return View();
-                }
+                //if (!ModelState.IsValid)
+                //{
+                //    return View();
+                //}
+           if (ModelState.IsValid)
+            { 
                 var authorModel = _mapper.Map<AuthorModel>(model);
-                _authorService.Add(authorModel);
-
+                _authorService.Add(authorModel);               
                 return RedirectToAction("Index");
             }
-            catch
-            {
+            //catch
+            //{
                 return View();
-            }
+            //}
         }
 
         // GET: Author/Edit/5
@@ -81,22 +82,23 @@ namespace BlogMVC.Controllers
         [HttpPost]
         public ActionResult Edit(int id, AuthorViewModel model)
         {
-            try
-            {
+            //try
+            //{
                 // TODO: Add update logic here
-                if (!ModelState.IsValid)
-                {
-                    return View();
-                }
+                //if (!ModelState.IsValid)
+                //{
+                //    return View();
+                //}
+           if (ModelState.IsValid)
+            { 
                 var authorModel = _mapper.Map<AuthorModel>(model);
-                _authorService.Add(authorModel);
-
+                _authorService.Update(authorModel);               
                 return RedirectToAction("Index");
             }
-            catch
-            {
+            //catch
+            //{
                 return View();
-            }
+            //}
         }
 
         // GET: Author/Delete/5

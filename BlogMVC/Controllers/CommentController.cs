@@ -50,21 +50,22 @@ namespace BlogMVC.Controllers
         [HttpPost]
         public ActionResult Create(CommentViewModel model)
         {
-            try
-            {
-                // TODO: Add insert logic here
-                if (!ModelState.IsValid)
-                {
-                    return View();
-                }
+            //try
+            //{
+            // TODO: Add insert logic here
+            //if (!ModelState.IsValid)
+            //{
+            //    return View();
+            //}
+            if (ModelState.IsValid) { 
                 var commentModel = _mapper.Map<CommentModel>(model);
                 _commentService.Add(commentModel);
                 return RedirectToAction("Index");
             }
-            catch
-            {
+            //catch
+            //{
                 return View();
-            }
+            //}
         }
 
         // GET: Comment/Edit/5
@@ -77,21 +78,22 @@ namespace BlogMVC.Controllers
         [HttpPost]
         public ActionResult Edit(int id, CommentViewModel model)
         {
-            try
-            {
-                // TODO: Add update logic here
-                if (!ModelState.IsValid)
-                {
-                    return View();
-                }
+            //try
+            //{
+            // TODO: Add update logic here
+            //if (!ModelState.IsValid)
+            //{
+            //    return View();
+            //}
+            if (ModelState.IsValid) { 
                 var commentModel = _mapper.Map<CommentModel>(model);
-                _commentService.Add(commentModel);
+                _commentService.Update(commentModel);
                 return RedirectToAction("Index");
             }
-            catch
-            {
+            //catch
+            //{
                 return View();
-            }
+            //}
         }
 
         // GET: Comment/Delete/5
