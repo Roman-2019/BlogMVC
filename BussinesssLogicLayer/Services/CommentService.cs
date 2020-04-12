@@ -12,7 +12,7 @@ using DAL.Repositories;
 
 namespace BussinesssLogicLayer.Services
 {
-    public class CommentService : GeneralService<CommentModel, Comment>, IDBService<CommentModel>
+    public class CommentService : GeneralService<CommentModel, Comment>, ICommentService
     {
         private readonly IMapper _mapper;
 

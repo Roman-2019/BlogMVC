@@ -12,7 +12,7 @@ namespace BlogMVC.Controllers
 {
     public class CategoryController: IDBController<CategoryViewModel>
     {
-        public readonly IDBService<CategoryModel> _categoryViewModelService;
+        public readonly ICategoryService _categoryViewModelService;
         public CategoryController()
         {
             //_categoryViewModelService = new CategoryService();

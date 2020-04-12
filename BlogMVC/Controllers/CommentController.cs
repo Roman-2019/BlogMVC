@@ -1,46 +1,119 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using BlogMVC.Interfaces;
+﻿using AutoMapper;
 using BlogMVC.Models;
 using BussinesssLogicLayer.Interfaces;
 using BussinesssLogicLayer.Models;
-using BussinesssLogicLayer.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
 namespace BlogMVC.Controllers
 {
-    public class CommentController: IDBController<CommentViewModel>
+    public class CommentController : Controller
     {
-        public readonly IDBService<CommentModel> _commentViewModelService;
+        private readonly ICommentService _commentService;
+        private readonly IMapper _mapper;
+
         public CommentController()
         {
-            //_commentViewModelService = new CommentService();
+
+        }
+        public CommentController(ICommentService service, IMapper mapper)
+        {
+            _mapper = mapper;
+            _commentService = service;
+        }
+        // GET: Comment
+        public ActionResult Index()
+        {
+            var allComments = _commentService.GetAll();
+            var comments = _mapper.Map<IEnumerable<CommentViewModel>>(allComments);
+            return View(comments);
         }
 
-        public void Add(CommentViewModel model)
+        // GET: Comment/Details/5
+        public ActionResult Details(int id)
         {
-            throw new NotImplementedException();
+            var commentModel = _commentService.GetById(id);
+            var commentViewModel = _mapper.Map<AuthorViewModel>(commentModel);
+            return View(commentViewModel);
         }
 
-        public void Delete(int id)
+        // GET: Comment/Create
+        public ActionResult Create()
         {
-            throw new NotImplementedException();
+            return View();
         }
 
-        public IEnumerable<CommentViewModel> GetAll()
+        // POST: Comment/Create
+        [HttpPost]
+        public ActionResult Create(CommentViewModel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // TODO: Add insert logic here
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+                var commentModel = _mapper.Map<CommentModel>(model);
+                _commentService.Add(commentModel);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
         }
 
-        public CommentViewModel GetById()
+        // GET: Comment/Edit/5
+        public ActionResult Edit(int id)
         {
-            throw new NotImplementedException();
+            return View();
         }
 
-        public void Update(CommentViewModel model)
+        // POST: Comment/Edit/5
+        [HttpPost]
+        public ActionResult Edit(int id, CommentViewModel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // TODO: Add update logic here
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+                var commentModel = _mapper.Map<CommentModel>(model);
+                _commentService.Add(commentModel);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Comment/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View();
+        }
+
+        // POST: Comment/Delete/5
+        [HttpPost]
+        public ActionResult Delete(int id, CommentViewModel model)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                _commentService.Remove(id);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }

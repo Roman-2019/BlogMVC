@@ -12,7 +12,7 @@ using DAL.Repositories;
 
 namespace BussinesssLogicLayer.Services
 {
-    public class PostService : GeneralService<PostModel, Post>, IDBService<PostModel>
+    public class PostService : GeneralService<PostModel, Post>, IPostService
     {
         private readonly IMapper _mapper;
 

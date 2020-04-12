@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace BussinesssLogicLayer.Interfaces
 {
-    public interface IService<ModelBL> where ModelBL : class
+    public interface IService<T> where T : class
     {
-        void Add(ModelBL model);
+        void Add(T model);
         void Remove(int id);
-        void Update(ModelBL model);
-        IEnumerable<ModelBL> GetAll();
+        void Update(T model);
+        IEnumerable<T> GetAll();
     }
 }

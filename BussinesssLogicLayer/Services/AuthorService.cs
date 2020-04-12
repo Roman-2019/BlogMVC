@@ -13,7 +13,7 @@ using DAL.Repositories;
 
 namespace BussinesssLogicLayer.Services
 {
-    public class AuthorService: GeneralService<AuthorModel, Author>, IDBService<AuthorModel>
+    public class AuthorService: GeneralService<AuthorModel, Author>, IAuthorService
     {
         //private readonly IDBRepository<Author> _authorRepository;
         private readonly IMapper _mapper;

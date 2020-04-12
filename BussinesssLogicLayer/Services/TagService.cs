@@ -12,7 +12,7 @@ using DAL.Repositories;
 
 namespace BussinesssLogicLayer.Services
 {
-    public class TagService : GeneralService<TagModel, Tag>, IDBService<TagModel>
+    public class TagService : GeneralService<TagModel, Tag>, ITagService
     {
         private readonly IMapper _mapper;
 

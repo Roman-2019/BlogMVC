@@ -31,7 +31,7 @@ namespace DAL.Repositories
 
         public IEnumerable<Post> GetAll()
         {
-            return _bctx.Posts.AsNoTracking().ToList();
+            return _bctx.Posts.AsNoTracking();//.ToList();
         }
 
         public Post GetById(int id)

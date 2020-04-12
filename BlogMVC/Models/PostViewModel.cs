@@ -15,12 +15,12 @@ namespace BlogMVC.Models
         public int AuthorViewModelId { get; set; }
         public AuthorViewModel Author { get; set; }
 
-        public virtual IEnumerable<CommentViewModel> Comments { get; set; }
+        /*public virtual IEnumerable<CommentViewModel> Comments { get; set; }
         public virtual IEnumerable<TagViewModel> Tags { get; set; }
         public PostViewModel()
         {
             Comments = new List<CommentViewModel>();
             Tags = new List<TagViewModel>();
-        }
+        }*/
     }
 }

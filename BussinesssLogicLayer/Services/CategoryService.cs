@@ -12,7 +12,7 @@ using DAL.Repositories;
 
 namespace BussinesssLogicLayer.Services
 {
-    public class CategoryService : GeneralService<CategoryModel, Category>, IDBService<CategoryModel>
+    public class CategoryService : GeneralService<CategoryModel, Category>, ICategoryService
     {
         private readonly IMapper _mapper;
 

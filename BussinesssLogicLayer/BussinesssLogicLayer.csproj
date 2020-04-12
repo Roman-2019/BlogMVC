@@ -75,8 +75,12 @@
   <ItemGroup>
     <Compile Include="BLLLightInjectConfiguration.cs" />
     <Compile Include="BLLMapperProFile.cs" />
-    <Compile Include="Interfaces\IDBService.cs" />
+    <Compile Include="Interfaces\IAuthorService.cs" />
+    <Compile Include="Interfaces\ICategoryService.cs" />
+    <Compile Include="Interfaces\ICommentService.cs" />
+    <Compile Include="Interfaces\IPostService.cs" />
     <Compile Include="Interfaces\IService.cs" />
+    <Compile Include="Interfaces\ITagService.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="Models\AuthorModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
