@@ -10,7 +10,7 @@ namespace BussinesssLogicLayer.Models
     {
         public int Id { get; set; }
         public string Text { get; set; }
-        public virtual IEnumerable<PostModel> Posts { get; set; }
+        public virtual ICollection<PostModel> Posts { get; set; }
       
     }
 }

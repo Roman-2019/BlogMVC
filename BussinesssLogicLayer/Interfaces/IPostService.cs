@@ -10,5 +10,6 @@ namespace BussinesssLogicLayer.Interfaces
     public interface IPostService: IService<PostModel>
     {
         PostModel GetById(int id);
+        IEnumerable<PostModel> Posts(int pageNo, int pageSize);
     }
 }

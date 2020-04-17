@@ -16,8 +16,8 @@ namespace BussinesssLogicLayer.Models
         public int AuthorId { get; set; }
         public virtual AuthorModel AuthorModel { get; set; }
 
-        public virtual ICollection<CommentModel> Comments { get; set; }
-        public virtual ICollection<TagModel> Tags { get; set; }
+        public  ICollection<CommentModel> Comments { get; set; }
+        public  ICollection<TagModel> Tags { get; set; }
       
     }
 }

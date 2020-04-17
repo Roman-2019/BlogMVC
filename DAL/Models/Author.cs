@@ -13,8 +13,8 @@ namespace DAL.Models
         public string Login { get; set; }
         public string Password { get; set; }
         public string Status { get; set; }
-        public ICollection<Post> Posts { get; set; }
-        public ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
        
     }
 }

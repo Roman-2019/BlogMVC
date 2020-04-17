@@ -5,49 +5,50 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
 using DAL.Models;
+using System.Data.Entity;
 
 namespace DAL.Repositories
 {
-    public class PostRepository: IDBRepository<Post>
+    public class PostRepository: GenericRepository<Post>, IDBRepository<Post>
     {
-        public readonly BlogContext _bctx;
-        public PostRepository() 
+        //public readonly BlogContext _bctx;
+        public PostRepository(BlogContext bctx) : base(bctx)
         {
-            _bctx = new BlogContext();
+            //_bctx = new BlogContext();
         }
 
-        public void Add(Post post)
-        {
-            _bctx.Posts.Add(post);
-            _bctx.SaveChanges();
-        }
+        //public void Add(Post post)
+        //{
+        //    _bctx.Posts.Add(post);
+        //    _bctx.SaveChanges();
+        //}
 
-        public void Delete(int id)
-        {
-            var postDelete = GetById(id);
-            _bctx.Posts.Remove(postDelete);
-            _bctx.SaveChanges();
-        }
+        //public void Delete(int id)
+        //{
+        //    var postDelete = GetById(id);
+        //    _bctx.Posts.Remove(postDelete);
+        //    _bctx.SaveChanges();
+        //}
 
-        public IEnumerable<Post> GetAll()
-        {
-            return _bctx.Posts.AsNoTracking();//.ToList();
-        }
+        //public IEnumerable<Post> GetAll()
+        //{
+        //    return _bctx.Posts.AsNoTracking();//.ToList();
+        //}
 
-        public Post GetById(int id)
-        {
-            var postGetById = _bctx.Posts.FirstOrDefault(x => x.Id == id);
-            return postGetById;
-        }
+        //public Post GetById(int id)
+        //{
+        //    var postGetById = _bctx.Posts.FirstOrDefault(x => x.Id == id);
+        //    return postGetById;
+        //}
 
-        public void Update(Post post)
-        {
-            var updatedPost = GetById(post.Id);
-            updatedPost.Comments = post.Comments;
-            updatedPost.Tags = post.Tags;
+        //public void Update(Post post)
+        //{
+        //    var updatedPost = GetById(post.Id);
+        //    updatedPost.Comments = post.Comments;
+        //    updatedPost.Tags = post.Tags;
 
-            _bctx.Entry(updatedPost);
-            _bctx.SaveChanges();
-        }
+        //    _bctx.Entry(updatedPost);
+        //    _bctx.SaveChanges();
+        //}
     }
 }

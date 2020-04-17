@@ -20,7 +20,7 @@ namespace BlogMVC.Models
         [Required]
         public DateTime DateTime { get; set; }
 
-        public int AuthorViewModelId { get; set; }
+        public int AuthorId { get; set; }
         public virtual AuthorViewModel AuthorViewModel { get; set; }
 
         //public virtual IEnumerable<CommentViewModel> Comments { get; set; }

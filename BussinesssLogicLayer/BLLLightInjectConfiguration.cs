@@ -22,6 +22,7 @@ namespace BussinesssLogicLayer
             container.Register<IDBRepository<Tag>, TagRepository>();
             container.Register<IDBRepository<Comment>, CommentRepository>();
 
+            //container.Register(typeof(IDBRepository<>), typeof(GenericRepository<>));
             return container;
         }
     }

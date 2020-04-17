@@ -26,6 +26,20 @@ namespace BussinesssLogicLayer.Services
             var postModel = GetAll().FirstOrDefault(x => x.Id == id);
             return postModel;
         }
+
+        public IEnumerable<PostModel> Posts(int pageNo, int pageSize)
+        {
+            var posts = _repository.GetAll()
+                .OrderByDescending(x => x.DateTime)
+                .Skip(pageNo * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            var postsModel = Map(posts);
+
+            return postsModel;
+
+        }
         public override PostModel Map(Post modelDL)
         {
             return _mapper.Map<PostModel>(modelDL);

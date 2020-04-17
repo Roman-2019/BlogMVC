@@ -67,6 +67,7 @@
     <Compile Include="Repositories\AuthorRepository.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\CommentRepository.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\PostRepository.cs" />
     <Compile Include="Repositories\TagRepository.cs" />
   </ItemGroup>
